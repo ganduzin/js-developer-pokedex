@@ -90,7 +90,7 @@
     color: #000;
     opacity: .3;
     text-align: right;
-    font-size: .625rem;
+    font-size: medium;
 }
 
 .pokemon .name {
@@ -162,4 +162,89 @@
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+}
+
+.pokemonMore {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "imgMore imgMore"
+        "nameAndTypes nameAndTypes"
+        "weightAndHeight weightAndHeight"
+        "stats stats"
+}
+.imgMore {
+    grid-area: imgMore;
+    margin: auto;
+    padding: auto;
+    max-width: 15rem;
+}
+
+.nameAndTypes {
+    grid-area: nameAndTypes;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:1rem
+}
+
+.weightAndHeight {
+    grid-column: span 2;
+    grid-area: weightAndHeight;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.typesMore {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0%;
+
+}
+.typeMore {
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+}
+
+.numberMore {
+    font-size: medium;
+}
+.nameMore {
+    font-size: x-large;
+}
+
+.stats{
+    grid-column: span 2;
+    list-style: none;
+    padding: 0;
+}
+
+.stat{
+    display: flex;
+    flex-direction: row;
+    font-size: small;
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    padding: 2px;
+}
+
+.statName {
+    grid-column: span 1;
+}
+
+.statBar {
+    grid-column: span 1;
+}
+
+.statNumber {
+    grid-column: span 1;
+    text-align: right;
 }
